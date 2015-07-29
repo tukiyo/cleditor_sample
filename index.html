@@ -1,0 +1,49 @@
+<html>
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="jquery.cleditor.css" />
+    <script src="jquery.min.js"></script>
+    <script src="jquery.cleditor.min.js"></script>
+    <script src="jquery.cleditor.table.min.js"></script>
+    <script>
+$(document).ready(function () {
+$.cleditor.buttons.source.title = 'ソース表示';
+$.cleditor.buttons.bold.title = '太字';
+$.cleditor.buttons.italic.title = '斜体';
+$.cleditor.buttons.underline.title = '下線';
+$.cleditor.buttons.size.title = 'フォントサイズ';
+$.cleditor.buttons.color.title = 'フォント色';
+$.cleditor.buttons.rule.title = '水平線(hrタグ)';
+$.cleditor.buttons.image.title = '画像urlの挿入(imgタグ)';
+$.cleditor.buttons.highlight.title = 'ハイライト';
+$.cleditor.buttons.removeformat.title = '書式の削除';
+$.cleditor.buttons.source.title = 'ソースの確認';
+$.cleditor.buttons.link.title = 'リンク(aタグ)';
+$.cleditor.buttons.unlink.title = 'リンク削除(aタグ)';
+$.cleditor.buttons.table.title = 'テーブル挿入(tableタグ)';
+$.cleditor.buttons.table.image = "../images/table.gif";
+$.cleditor.buttons.table.popupContent = "" +
+    '横:<input type="text" value="7" maxlength="1" style="width:20px">' +
+    '縦:<input type="text" value="3" maxlength="1" style="width:20px">' +
+    '<br /><input type="button" value="決定">',
+
+$("#input").cleditor({
+	width: 300,
+	height: 550,
+	sizes: "4,5,6,7",
+	useCSS: false,
+	controls: "source | bold italic underline | " +
+	"size color highlight removeformat " +
+	"alignleft center alignright | " +
+	"undo redo | rule image link unlink | table",
+	bodyStyle:""
+});
+});
+    </script>
+</head>
+<body>
+    <textarea id="input" name="input"></textarea>
+</body>
+</html>
+
+
